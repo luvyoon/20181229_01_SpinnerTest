@@ -6,9 +6,12 @@ import android.widget.Spinner;
 import java.util.ArrayList;
 import java.util.List;
 
+import kr.tjeit.a20181229_01_spinnertest.adapters.CompanyAdapter;
 import kr.tjeit.a20181229_01_spinnertest.datas.Restaurant;
 
 public class MainActivity extends BaseActivity {
+
+    CompanyAdapter mAdapter;
 
     List<Restaurant> restaurants = new ArrayList<Restaurant>();
 
@@ -32,6 +35,10 @@ public class MainActivity extends BaseActivity {
 
     @Override
     public void setvalues() {
+
+        mAdapter = new CompanyAdapter(mContext,restaurants);
+        companySpinner.setAdapter(mAdapter);
+
         fillRestaurants();
 
 
