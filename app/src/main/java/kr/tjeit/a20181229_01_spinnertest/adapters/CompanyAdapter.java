@@ -8,6 +8,8 @@ import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.bumptech.glide.Glide;
+
 import java.util.List;
 
 import kr.tjeit.a20181229_01_spinnertest.R;
@@ -35,7 +37,7 @@ public class CompanyAdapter extends ArrayAdapter <Restaurant> {
 
 
     @Override
-    public View getView(int position,  View convertView,  ViewGroup parent) {
+    public View getDropDownView(int position,  View convertView,  ViewGroup parent) {
 
         View row = convertView;
         if (row == null){
@@ -50,6 +52,8 @@ public class CompanyAdapter extends ArrayAdapter <Restaurant> {
 
 
         nameTxt.setText(data.getName());
+
+        Glide.with(mContext).load(data.getLogoURL()).into(logoImg);
 
 
        return row;
