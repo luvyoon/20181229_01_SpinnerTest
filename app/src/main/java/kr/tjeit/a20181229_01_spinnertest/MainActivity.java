@@ -52,6 +52,8 @@ public class MainActivity extends BaseActivity {
         restaurants.add(new Restaurant("피자헛", "강동구", "11:00 ~ 23:00", "https://mblogthumb-phinf.pstatic.net/20141124_182/howtomarry_1416806028308979cg_PNG/Pizza_Hut_logo.svg.png?type=w2"));
         restaurants.add(new Restaurant("파파존스", "성북구", "17:00 ~ 익일 04:00", "http://postfiles2.naver.net/20160530_65/ppanppane_1464617766007O9b5u_PNG/%C6%C4%C6%C4%C1%B8%BD%BA_%C7%C7%C0%DA_%B7%CE%B0%ED_%284%29.png?type=w966"));
 
+        mAdapter.notifyDataSetChanged();
+
     }
 
     @Override
