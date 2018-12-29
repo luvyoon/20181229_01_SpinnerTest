@@ -5,6 +5,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
+import android.widget.ImageView;
+import android.widget.TextView;
 
 import java.util.List;
 
@@ -40,6 +42,16 @@ public class CompanyAdapter extends ArrayAdapter <Restaurant> {
 
             row = inf.inflate(R.layout.company_list_item,null);
         }
+
+        ImageView logoImg = row.findViewById(R.id.logoImg);
+        TextView nameTxt = row.findViewById(R.id.nameTxt);
+
+        Restaurant data = mList.get(position);
+
+
+        nameTxt.setText(data.getName());
+
+
        return row;
 
     }
