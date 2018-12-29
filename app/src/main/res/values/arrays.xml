@@ -8,4 +8,15 @@
         <item>무직</item>
 
     </string-array>
+
+    <string-array name="achivement">
+        <item>중졸</item>
+        <item>고졸</item>
+        <item>대졸</item>
+        <item>대학원졸</item>
+        <item>그외</item>
+
+
+    </string-array>
+
 </resources>
